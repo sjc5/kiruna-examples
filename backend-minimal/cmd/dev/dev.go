@@ -1,15 +1,12 @@
 package main
 
-import "github.com/sjc5/kiruna"
+import (
+	"github.com/sjc5/kiruna"
+	root "github.com/sjc5/kiruna-examples/backend-minimal"
+)
 
 func main() {
-	k := &kiruna.Kiruna{
-		Config: &kiruna.Config{
-			EntryPoint: "cmd/app/main.go",
-			DevConfig: &kiruna.DevConfig{
-				ServerOnly: true,
-			},
-		},
-	}
-	k.Dev()
+	root.Kiruna.MustStartDev(&kiruna.DevConfig{
+		ServerOnly: true,
+	})
 }

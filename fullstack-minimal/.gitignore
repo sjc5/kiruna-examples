@@ -1,4 +1,0 @@
-dist/*
-!dist/kiruna
-dist/kiruna/*
-!dist/kiruna/keep_me

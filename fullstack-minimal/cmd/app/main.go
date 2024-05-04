@@ -17,7 +17,7 @@ func main() {
 	})
 
 	// Serve static files from "dist/kiruna/static/public" directory, accessible at "/public/"
-	http.Handle("/public/", global.Kiruna.GetServeStaticHandler("/public/"))
+	http.Handle("/public/", global.Kiruna.GetServeStaticHandler("/public/", true))
 
 	// Serve an HTML file using html/template
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
